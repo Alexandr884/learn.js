@@ -33,14 +33,32 @@
 // }
 // console.log(array());
 
-let arr = [9, 20, 8, 15];
-function array() {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 5 == 0) {
-            return [arr[i]]
-        }
+// let arr = [9, 20, 8, 15];
+// function array() {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 5 == 0) {
+//             console.log([arr[i]]);
+//         }
+//     }
+// }
+// array();
+
+let map = new Map([
+    [1, "Monday"],
+    [2, "Tuesday"],
+    [3, "Wednesday"],
+    [4, "Thursday"],
+    [5, "Friday"],
+    [6, "Saturday"],
+    [7, "Sunday"]
+])
+function weekday(num) {
+    let weekdays = map;
+    if (num >= 1 && num <= 7) {
+        return weekdays.get(num)
+    } else {
+        return "Incorrect value"
     }
+
 }
-
-console.log(array());
-
+console.log(weekday(20));
