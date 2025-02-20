@@ -98,3 +98,67 @@
 
 // alert("Sum=" + calculator.sum());
 // alert("Mul=" + calculator.mul());
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+
+// function sumSalaries(salaries) {
+//     let sum = 0;
+//     for (let sumSalaries of Object.values(salaries)) {
+//         sum += sumSalaries;
+//     }
+//     return sum;
+
+// }
+// console.log(sumSalaries(salaries));
+
+
+// let user = {
+//     name: 'John',
+//     age: 30
+//   };
+
+//   function count(obj) {
+//    return Object.keys(obj);
+
+//   }
+
+
+
+// let user = {
+//     name: "Василий Иванович",
+//     age: 35
+// };
+
+// let userString = JSON.stringify(user);
+
+// let parsedUser = JSON.parse(userString)
+
+// console.log(parsedUser);
+
+
+
+
+let room = {
+    number: 23
+};
+
+let meetup = {
+    title: "Совещание",
+    occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+    place: room
+};
+
+// цикличные ссылки
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+return (JSON.stringify(meetup, function replacer(key, value) {
+
+    return (key != "" && value == meetup) ? undefined : value;
+}));
+
+console.log(replacer());
