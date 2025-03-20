@@ -156,31 +156,51 @@
 
 // }
 
-function createPhoneNumber(num) {
-    let result = "";
-    for (let i = 0; i < num.length; i++) {
-        if (i <= 0) {
-            result += "(" + num[i]
-        } else if (i <= 2) {
-            result += num[i]
-        } else if (i >= 2 && i <= 3) {
-            result += ")" + " " + num[i]
-        } else if (i >= 4 && i <= 5) {
-            result += num[i];
-        } else if (i >= 5 && i <= 6) {
-            result += "-" + num[i]
-        } else if (i > 6) {
-            result += num[i]
-        }
-    }
-    return result;
+// function createPhoneNumber(num) {
+//     let result = "";
+//     for (let i = 0; i < num.length; i++) {
+//         if (i <= 0) {
+//             result += "(" + num[i]
+//         } else if (i <= 2) {
+//             result += num[i]
+//         } else if (i >= 2 && i <= 3) {
+//             result += ")" + " " + num[i]
+//         } else if (i >= 4 && i <= 5) {
+//             result += num[i];
+//         } else if (i >= 5 && i <= 6) {
+//             result += "-" + num[i]
+//         } else if (i > 6) {
+//             result += num[i]
+//         }
+//     }
+//     return result;
+// }
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (let i = arr.length; i > -1; i--) {
+//     console.log(arr[i]);
+
+// }
+
+// function number(num) {
+//     if (num % 2 == 0) {
+//         return "Even";
+//     } else
+//         return "Odd"
+// }
+// console.log(number(2));
+
+
+// let num = 4;
+// let num2 = -num;
+// console.log(num2);
+
+function transform(name, surname) {
+    let result = '';
+    result += name.charAt(0) + "." + surname.charAt(0)
+    return result.toUpperCase()
 }
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
-
-
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-for (let i = arr.length; i > -1; i--) {
-    console.log(arr[i]);
-
-}
+console.log(transform("Jhon", "smith"));
