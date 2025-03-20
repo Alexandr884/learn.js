@@ -126,3 +126,61 @@
 //         return (dogName + " says woof woof");
 // }
 // console.log(compare("Alise", 24));
+
+// function createPhoneNumber(num) {
+//     let result = "";
+//     for (let i = 0; i < num.length; i++) {
+//         if (i <= 0) {
+//             result += "(" + num[i]
+//         } else if (i <= 2) {
+//             result += num[i]
+//         } else if (i >= 2 && i <= 3) {
+//             result += ")" + " " + num[i]
+//         } else if (i >= 4 && i <= 5) {
+//             result += num[i];
+//         } else if (i >= 5 && i <= 6) {
+//             result += "-" + num[i]
+//         } else if (i > 6) {
+//             result += num[i]
+//         }
+//     }
+//     return result;
+// }
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (let i = arr.length; i > -1; i--) {
+//     console.log(arr[i]);
+
+// }
+
+function createPhoneNumber(num) {
+    let result = "";
+    for (let i = 0; i < num.length; i++) {
+        if (i <= 0) {
+            result += "(" + num[i]
+        } else if (i <= 2) {
+            result += num[i]
+        } else if (i >= 2 && i <= 3) {
+            result += ")" + " " + num[i]
+        } else if (i >= 4 && i <= 5) {
+            result += num[i];
+        } else if (i >= 5 && i <= 6) {
+            result += "-" + num[i]
+        } else if (i > 6) {
+            result += num[i]
+        }
+    }
+    return result;
+}
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = arr.length; i > -1; i--) {
+    console.log(arr[i]);
+
+}
